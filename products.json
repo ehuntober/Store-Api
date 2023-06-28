@@ -14,6 +14,18 @@
     {
         "name": "albany table",
         "price": 309,
-        "company": "winnig galaa"
+        "company": "winnig galaa",
+        "rating": 4.9
+    },
+    {
+        "name": "armchair",
+        "price": 125,
+        "company": "caressa",
+        "rating": 4.8
+    },
+    {
+        "name": "batter wave",
+        "price": 43,
+        "company": "marcos"
     }
 ]
