@@ -1,0 +1,19 @@
+[
+    {
+        "name": "accent chair",
+        "price": 25,
+        "company": "marcos",
+        "rating": 4
+    },
+    {
+        "name": "albany secional",
+        "price": 109,
+        "company": "liddy",
+        "rating": 5
+    },
+    {
+        "name": "albany table",
+        "price": 309,
+        "company": "winnig galaa"
+    }
+]
