@@ -8,16 +8,16 @@ const getAllProductsStatic = async (req,res) =>{
 
 const getAllProducts = async (req,res) =>{
 
-    const {featured}  = req.query
+    const {featured, name}  = req.query
     const queryObject = {}
 
     if(featured) {
         queryObject.featured = featured === 'true' ? true : false
     }
 
-    if (commpany){
-        queryObject.commpany = commpany
-    }
+    // if (company){
+    //     queryObject.company = company
+    // }
 
     if (name) {
         queryObject.name = name
