@@ -35,11 +35,19 @@ const getAllProducts = async (req,res) =>{
 
         }
         const reqEx = /\b(<|>|>=|=|<|<=)\b/g
-        let filters = numbericFilters.replace(RegExp, (match)=> `-${operatorMap[match]}-`)
+        let filters = numericFilters.replace(RegExp, (match)=> `-${operatorMap[match]}-`)
+        
+        const options = ['price', 'rating']
+        filters= filters.split(',').forEach((item)=>{
+            const [filed,operator,value] = item.split('-')
+            if(options.includes(filed)){
+                queryObject[field] = {[operator]: Number(value)}
+            }
+        })
         console.log(numericFilters)
     }
     // console.log(queryObject)
-    let result = Product.find(query)
+    let result = Product.find(queryObject)
     if(sort){
         const sortList = sort.split(',').join('')
         result = result.sort(sortList)
